@@ -1,0 +1,48 @@
+let userName = "Alex"; // Defines username
+userName ? console.log(`Hello ${userName}!`) : console.log("Hello!"); // Ternary operator - if username defined string calls username in greeting, else returns "Hello!"
+let userQuestion = "Will it rain tomorrow?"; // Question for the Magic 8 Ball
+userQuestion
+  ? console.log(
+      `Hello ${userName}. You asked the Magic 8 Ball: \'${userQuestion}\'`
+    )
+  : console.log("You didn't enter anything."); // Ternary operator greeting user and printing question else returns nil statement.
+let randomNumber = Math.floor(Math.random() * 8);
+let eightBall = "";
+
+// Control Flow - Switch Statements
+switch (randomNumber) {
+  case "0":
+    eightBall = "It is certain";
+    console.log(eightBall);
+    break;
+  case "1":
+    eightBall = "It is decidedly so";
+    console.log(eightBall);
+    break;
+  case "2":
+    eightBall = "Reply hazy try again";
+    console.log(eightBall);
+    break;
+  case "3":
+    eightBall = "Cannot predict now";
+    console.log(eightBall);
+    break;
+  case "4":
+    eightBall = "Do not count on it";
+    console.log(eightBall);
+    break;
+  case "5":
+    eightBall = "My sources say no";
+    console.log(eightBall);
+    break;
+  case "6":
+    eightBall = "Outlook not so good";
+    console.log(eightBall);
+    break;
+  case "7":
+    eightBall = "Signs point to yes";
+    console.log(eightBall);
+    break;
+  default:
+    console.log("No variable provided by randomNumber");
+}
