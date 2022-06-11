@@ -1,0 +1,38 @@
+let day = "Tuesday";
+function getSleepHours(day) {
+  let Monday = 8;
+  let Tuesday = 7;
+  let Wednesday = 6;
+  let Thursday = 5;
+  let Friday = 4;
+  let Saturday = 5;
+  let Sunday = 6;
+  switch (day) {
+    case "Monday":
+      return 8;
+      break;
+    case "Tuesday":
+      return 7;
+      break;
+    case "Wednesday":
+      return 6;
+      break;
+    case "Thursday":
+      return 5;
+      break;
+    case "Friday":
+      return 4;
+      break;
+    case "Saturday":
+      return 5;
+      break;
+    case "Sunday":
+      return 6;
+      break;
+    default:
+      return "No day found.";
+      console.log(getSleepHours(day));
+  }
+}
+getSleepHours();
+// console.log(getSleepHours(day));
