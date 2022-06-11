@@ -1,0 +1,78 @@
+// Codecademy Project: Rock Paper Scissors Game || Introduction to JavaScript
+function getUserChoice() {
+  let userChoice = Math.floor(Math.random() * 3);
+  switch (userChoice) {
+    case 0:
+      return "rock";
+      break;
+    case 1:
+      return "paper";
+      break;
+    case 2:
+      return "scissors";
+      break;
+    default:
+      console.log("Error with getUserChoice function!");
+      break;
+  }
+}
+function getComputerChoice() {
+  let computerChoice = Math.floor(Math.random() * 3);
+  switch (computerChoice) {
+    case 0:
+      return "rock";
+      break;
+    case 1:
+      return "paper";
+      break;
+    case 2:
+      return "scissors";
+      break;
+    default:
+      console.log("Error with getComputerChoice function!");
+      break;
+  }
+}
+
+function determineWinner(userChoice, computerChoice) {
+  getUserChoice();
+  getComputerChoice();
+  if (userChoice === computerChoice) {
+    console.log("This game is a tie!");
+    return;
+  }
+
+  if (userChoice === "rock") {
+    if (computerChoice === "paper") {
+      console.log("Sorry, computer won!");
+    } else {
+      console.log("Congrats, you won!");
+    }
+  }
+
+  if (userChoice === "paper") {
+    if (computerChoice === "scissors") {
+      console.log("Sorry, computer won!");
+    } else {
+      console.log("Congrats, you won!");
+    }
+  }
+
+  if (userChoice === "scissors") {
+    if (computerChoice === "rock") {
+      console.log("Sorry, computer won!");
+    } else {
+      console.log("Congrats, you won!");
+    }
+  }
+}
+function playRPS() {
+  let userChoice = getUserChoice();
+  let computerChoice = getComputerChoice();
+  console.log(
+    `User choice: ${userChoice}, Computer choice: ${computerChoice}.`
+  );
+determineWinner(userChoice, computerChoice);
+}
+
+playRPS();
