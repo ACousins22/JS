@@ -1,38 +1,67 @@
-let day = "Tuesday";
+let day = "Sunday";
 function getSleepHours(day) {
-  let Monday = 8;
-  let Tuesday = 7;
-  let Wednesday = 6;
-  let Thursday = 5;
-  let Friday = 4;
-  let Saturday = 5;
-  let Sunday = 6;
+  let Monday;
+  let Tuesday;
+  let Wednesday;
+  let Thursday;
+  let Friday;
+  let Saturday;
+  let Sunday;
   switch (day) {
     case "Monday":
-      return 8;
+      return 5;
       break;
     case "Tuesday":
-      return 7;
-      break;
-    case "Wednesday":
-      return 6;
-      break;
-    case "Thursday":
-      return 5;
-      break;
-    case "Friday":
       return 4;
       break;
+    case "Wednesday":
+      return 4;
+      break;
+    case "Thursday":
+      return 3;
+      break;
+    case "Friday":
+      return 3;
+      break;
     case "Saturday":
-      return 5;
+      return 3;
       break;
     case "Sunday":
-      return 6;
+      return 2;
       break;
     default:
       return "No day found.";
-      console.log(getSleepHours(day));
   }
 }
-getSleepHours();
-// console.log(getSleepHours(day));
+function getActualSleepHours() {
+  return getSleepHours("Monday") +
+  getSleepHours("Tuesday") +
+  getSleepHours("Wednesday") +
+  getSleepHours("Thursday") +
+  getSleepHours("Friday") +
+  getSleepHours("Saturday") +
+  getSleepHours("Sunday"); 
+}
+function getIdealSleepHours() {
+  let idealHours = 8;
+  return idealHours * 7;
+}
+function calculateSleepDebt() {
+  let actualSleepHours = getActualSleepHours();
+  let idealSleepHours = getIdealSleepHours();
+  console.log(`Actual sleep hours: ${getActualSleepHours()}`);
+  console.log(`Ideal sleep hours: ${getIdealSleepHours()}`);
+  if (actualSleepHours === idealSleepHours) {
+    console.log("Perfect amount of sleep.");
+    return;
+  }
+  if (actualSleepHours > idealSleepHours) {
+    console.log("Got " + (actualSleepHours - idealSleepHours) + " hours more sleep than required.");
+    return;
+  }
+  if (actualSleepHours < idealSleepHours) {
+    console.log("Sleep deficit acquired. -5 to mood. You slept approximately " + (idealSleepHours - actualSleepHours) + " less hours than you needed to this week.");
+    return;
+  }
+  }
+  calculateSleepDebt();
