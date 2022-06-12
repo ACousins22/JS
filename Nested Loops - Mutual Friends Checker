@@ -1,0 +1,14 @@
+/* Codecademy || Introduction to JavaScript || Nested Loops
+Written 13/06/2022 - Alex Cousins */
+
+bobsFollowers = ["Fred", "Dave", "Barry", "Frank"];
+tinasFollowers = ["Gina", "Dave", "Barry"];
+mutualFollowers = []; // Empty array to use in our function
+for (let i = 0; i < bobsFollowers.length; i++) {
+  for (let j = 0; j < tinasFollowers.length; j++) {
+    if (bobsFollowers[i] === tinasFollowers[j]) {
+      mutualFollowers.push(bobsFollowers[i]);
+      console.log(`Mutual Followers found: ${mutualFollowers}`);
+    }
+  }
+}
