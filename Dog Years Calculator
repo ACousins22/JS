@@ -1,0 +1,16 @@
+/* Codecademy || Introduction to JavaScript || Dog Years Calculator
+Outputs user age in dog years.
+Written by Alex Cousins */
+
+const myAge = 26; // My Age
+let earlyYears = 2; // The first two years of a dog’s life count as 10.5 dog years each
+earlyYears = earlyYears * 10.5; // Multiply first 2 years by 10.5
+console.log("earlyYears: " + earlyYears); // Displays earlyYears variable
+let laterYears = myAge - 2 * 4; // My age minus 2 years
+console.log("laterYears: " + laterYears); // Displays laterYears variable
+const myAgeInDogYears = earlyYears + laterYears; // Adds earlyYears and laterYears together to get age in dog years.
+let myName = "Alex".toLowerCase(); // Stores name in lower case
+console.log(myName); // Prints myName variable
+console.log(
+  `My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years.`
+); // Interpolates all variables into one string and prints to console.
