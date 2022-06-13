@@ -1,3 +1,8 @@
+/* Codecademy lesson in cleaning up code/good practices on global and block scope of variables
+in order to preserve system memory and prevent the return of "undefined" errors when a variable
+is not accessible within a body of code due to global or local restrictions (scope). */
+
+
 // The scope of `random` is too loose
 // const random = Math.floor(Math.random() * 3);
 const name = "Nala";
