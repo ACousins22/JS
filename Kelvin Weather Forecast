@@ -1,0 +1,8 @@
+/* Codecademy | Introduction to JavaScript | Kelvin Weather Forecast
+Written by Alex Cousins */
+
+const kelvin = 293; // Kelvin forecast for today
+const celsius = kelvin - 273; // Convert Kelvin to Celsius
+let fahrenheit = celsius * (9/5) + 32; // Converts Celcius to Fahrenheit
+fahrenheit = Math.floor(fahrenheit); // Rounds down Fahrenheit units using Math Floor object
+console.log(`${kelvin} + ${celsius} + ${fahrenheit}`); // Prints result to console using string interpolation
