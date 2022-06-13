@@ -1,4 +1,6 @@
-// Codecademy Project: Rock Paper Scissors Game || Introduction to JavaScript
+/* Codecademy Project: Rock Paper Scissors Game || Introduction to JavaScript
+  Written by Alex Cousins */
+// getUserChoice function outputs random numbers from 0-2 (zero indexed) and uses switch cases to define Rock, Paper or Scissors 
 function getUserChoice() {
   let userChoice = Math.floor(Math.random() * 3);
   switch (userChoice) {
@@ -12,10 +14,11 @@ function getUserChoice() {
       return "scissors";
       break;
     default:
-      console.log("Error with getUserChoice function!");
+      console.log("Error with getUserChoice function!"); // Outputs an error if no variable is returned
       break;
   }
 }
+// This functions the same as getUserChoice - see above comment.
 function getComputerChoice() {
   let computerChoice = Math.floor(Math.random() * 3);
   switch (computerChoice) {
@@ -29,19 +32,19 @@ function getComputerChoice() {
       return "scissors";
       break;
     default:
-      console.log("Error with getComputerChoice function!");
+      console.log("Error with getComputerChoice function!"); // Outputs an error if no variable is returned
       break;
   }
 }
 
 function determineWinner(userChoice, computerChoice) {
-  getUserChoice();
-  getComputerChoice();
+  getUserChoice(); // Calls getUserChoice
+  getComputerChoice(); // Calls getComputerChoice
   if (userChoice === computerChoice) {
-    console.log("This game is a tie!");
+    console.log("This game is a tie!"); // Output if choices are the same
     return;
   }
-
+// IF statements for decision making logic
   if (userChoice === "rock") {
     if (computerChoice === "paper") {
       console.log("Sorry, computer won!");
@@ -66,13 +69,14 @@ function determineWinner(userChoice, computerChoice) {
     }
   }
 }
+// PlayRPS calls all functions in order to run the game.
 function playRPS() {
-  let userChoice = getUserChoice();
-  let computerChoice = getComputerChoice();
+  let userChoice = getUserChoice(); // Defines function return as variable for Console Logging
+  let computerChoice = getComputerChoice(); // Defines function return as variable for Console Logging
   console.log(
     `User choice: ${userChoice}, Computer choice: ${computerChoice}.`
-  );
-determineWinner(userChoice, computerChoice);
+  ); // Interpolation allows us to combine variables and strings using backticks (`) and $[] syntax.
+determineWinner(userChoice, computerChoice); // Prints result to console.
 }
 
-playRPS();
+playRPS(); // Start game
