@@ -1,0 +1,25 @@
+/* Codecademy Project || Introduction to JavaScript || Whale Talk Translator
+Written by Alex Cousins 15/06/22 */
+
+Takes the user input and translates it into whale sounds, doubling the U's and the E's in the process.
+let input = "This is a whale talk translator. It talks whale good.";
+const vowels = ["a", "e", "i", "o", "u"];
+let inputIndex;
+let valIndex;
+let resultArray = [];
+for (let inputIndex = 0; inputIndex <= input.length; inputIndex++) {
+  if (input[inputIndex] === "e") {
+    resultArray.push(input[inputIndex]); // Adds result to end of 'resultArray'
+  }
+  if (input[inputIndex] === "u") {
+    resultArray.push(input[inputIndex]); // Adds result to end of 'resultArray'
+  }
+  for (let valIndex = 0; valIndex <= vowels.length; valIndex++) {
+    if (input[inputIndex] === vowels[valIndex]) {
+      resultArray.push(input[inputIndex]); // Adds result to end of 'resultArray'
+    }
+  }
+}
+let resultString = resultArray.join("").toUpperCase(); // Concatenates array intro string and capitalizes string.
+console.log(resultString); // Returns final output to console
+
